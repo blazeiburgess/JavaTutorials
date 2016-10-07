@@ -97,4 +97,21 @@ public class BigONotation {
     theArray[indexOne] = theArray[indexTwo];
     theArray[indexTwo] = temp;
   }
+
+
+  // alternative search methods
+  public void linearSearchForValue(int value) {
+    boolean valueInArray = false;
+    String indexWithValue = "";
+    startTime = System.currentTimeMillis();
+    for (int i = 0; i < arraySize; i++) {
+      if (theArray[i] == value) {
+	valueInArray = true;
+	indexWithValue += i + " ";
+      }
+    }
+    System.out.println("Value found: " + valueInArray);
+    endTime = System.currentTimeMillis();
+    System.out.println("Linear Search Took " + (endTime - startTime));
+  }
 } 
