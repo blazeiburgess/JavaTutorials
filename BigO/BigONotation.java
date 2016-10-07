@@ -50,4 +50,8 @@ public class BigONotation {
     endTime = System.currentTimeMilis();
     System.out.println("Quick Sort of 300,000 items took " + (endTime - startTime));
   }
+
+  public void addItemToArray(int newItem) {
+    theArray[itemsInArray++] = newItem;
+  }
 } 
