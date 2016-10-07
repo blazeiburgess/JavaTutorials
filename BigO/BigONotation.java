@@ -90,4 +90,10 @@ public class BigONotation {
     }
     itemsInArray = arraySize - 1;
   }
+
+  public void swapValues(int indexOne, int indexTwo) {
+    int temp = theArray[indexOne];
+    theArray[indexOne] = theArray[indexTwo];
+    theArray[indexTwo] = temp;
+  }
 } 
