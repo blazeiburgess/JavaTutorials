@@ -65,4 +65,17 @@ public class BigONotation {
       quickSort(pivotLoc + 1, right);
     }
   }
+
+  public int partitionArray(int left, int right, int pivot) {
+    int leftPointer = left - 1;
+    int rightPointer = right;
+    while (true) {
+      if (leftPointer >= rightPointer) {
+	break;
+      }	else {
+	swapValues(leftPointer, rightPointer);
+	return leftPointer;
+      }
+    }
+  }
 } 
