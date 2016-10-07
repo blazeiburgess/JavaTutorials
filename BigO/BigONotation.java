@@ -144,5 +144,8 @@ public class BigONotation {
       }
       timesThrough++;
     }
+    endTime = System.currentTimeMillis();
+    System.out.println("Binary search took " + (endTime - startTime));
+    System.out.println("Times through: " + timesThrough);
   }
 }
