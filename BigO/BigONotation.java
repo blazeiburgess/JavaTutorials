@@ -83,4 +83,11 @@ public class BigONotation {
     arraySize = size;
     theArray = new int[size];
   }
+
+  public void generateRandomArray() {
+    for (int i = 0; i < arraySize; i++) {
+      theArray[i] = (int) (Math.random() * 1000) + 10;
+    }
+    itemsInArray = arraySize - 1;
+  }
 } 
