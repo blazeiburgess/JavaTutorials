@@ -74,9 +74,10 @@ public class BigONotation {
 	break;
       }	else {
 	swapValues(leftPointer, rightPointer);
-	return leftPointer;
       }
     }
+    swapValues(leftPointer, rightPointer);
+    return leftPointer;
   }
 
   BigONotation(int size) {
