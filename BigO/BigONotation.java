@@ -54,4 +54,15 @@ public class BigONotation {
   public void addItemToArray(int newItem) {
     theArray[itemsInArray++] = newItem;
   }
+
+  public void quickSort(int left, int right) {
+    if (right - left <= 0) {
+      return;
+    } else {
+      int pivot = theArray[right]
+      int pivotLoc = partitionArray(left, right, pivot);
+      quickSort(left, pivotLoc - 1);
+      quickSort(pivotLoc + 1, right);
+    }
+  }
 } 
