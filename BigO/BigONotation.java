@@ -125,4 +125,24 @@ public class BigONotation {
        }
     }
   }
+
+  public void binarySearchForValue(int value) {
+    startTime = System.currentTimeMillis();
+    int lowIndex = 0;
+    int highIndex = arraySize - 1;
+    int timesThrough = 0;
+
+    while (lowIndex <= highIndex) {
+      int middleIndex = (highIndex + lowIndex) / 2;
+      if (theArray[middleIndex] < value) {
+	lowIndex = middleIndex + 1;
+      } else if (theArray[middleIndex] > value) {
+	highIndex = middleIndex - 1;
+      } else {
+	System.out.println("\nFound a match for " + value + " at index " + middleIndex);
+	lowIndex = highIndex + 1;
+      }
+      timesThrough++;
+    }
+  }
 }
