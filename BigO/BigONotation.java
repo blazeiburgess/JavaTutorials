@@ -99,7 +99,7 @@ public class BigONotation {
   }
 
 
-  // alternative search methods
+  // alternative search/search methods
   public void linearSearchForValue(int value) {
     boolean valueInArray = false;
     String indexWithValue = "";
@@ -114,4 +114,15 @@ public class BigONotation {
     endTime = System.currentTimeMillis();
     System.out.println("Linear Search Took " + (endTime - startTime));
   }
-} 
+
+  public void bubbleSort() {
+    startTime = System.currentTimeMillis();
+    for (int i = arraySize - 1; i > 1; i--) {
+      for (int j = 0; j < i; j++) {
+	if (theArray[j] > theArray[j + 1]) {
+	  swapValues(j, j + 1);
+	}
+       }
+    }
+  }
+}
