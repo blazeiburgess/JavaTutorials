@@ -35,19 +35,19 @@ public class BigONotation {
     testAlgo5.generateRandomArray();
 
     // tests `O(n log n)`
-    startTime = System.currentTimeMilis();
+    startTime = System.currentTimeMillis();
     testAlgo2.quickSort(0, testAlgo2.itemsInArray);
-    endTime = System.currentTimeMilis();
+    endTime = System.currentTimeMillis();
     System.out.println("Quick Sort of 100,000 items took " + (endTime - startTime));
 
-    startTime = System.currentTimeMilis();
+    startTime = System.currentTimeMillis();
     testAlgo3.quickSort(0, testAlgo2.itemsInArray);
-    endTime = System.currentTimeMilis();
+    endTime = System.currentTimeMillis();
     System.out.println("Quick Sort of 200,000 items took " + (endTime - startTime));
 
-    startTime = System.currentTimeMilis();
+    startTime = System.currentTimeMillis();
     testAlgo4.quickSort(0, testAlgo2.itemsInArray);
-    endTime = System.currentTimeMilis();
+    endTime = System.currentTimeMillis();
     System.out.println("Quick Sort of 300,000 items took " + (endTime - startTime));
   }
 
@@ -59,7 +59,7 @@ public class BigONotation {
     if (right - left <= 0) {
       return;
     } else {
-      int pivot = theArray[right]
+      int pivot = theArray[right];
       int pivotLoc = partitionArray(left, right, pivot);
       quickSort(left, pivotLoc - 1);
       quickSort(pivotLoc + 1, right);
@@ -77,5 +77,10 @@ public class BigONotation {
 	return leftPointer;
       }
     }
+  }
+
+  BigONotation(int size) {
+    arraySize = size;
+    theArray = new int[size];
   }
 } 
